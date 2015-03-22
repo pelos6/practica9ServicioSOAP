@@ -166,11 +166,10 @@ class DB {
 
     // obtiene el stock de un producto en una tienda
     public static function obtieneStock($codigo, $tienda) {
-        error_log("antes de la llamada al sql");
         $sql = "SELECT unidades FROM stock ";
         $sql .= " WHERE producto='" . $codigo . "'";
         $sql .= " and tienda='" . $tienda . "'";
-        error_log("despues de la llamada al sql " . $sql);
+       // error_log("despues de la llamada al sql " . $sql);
         $resultado = self::ejecutaConsulta($sql);
 
         if (isset($resultado)) {

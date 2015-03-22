@@ -26,7 +26,7 @@
     *  esto genera el fichero Server.php en el directorio donde esta php.exe (donde lo lanzo)
 *    lanzo clienteW.php antes de cambiar el ServerW.php mio por el generado y funciona
 *    renombro el fichero ServerW.php mio por ServerWJavier.php y coloco el ServerW.php generado en el directorio del proyecto
-*  creo clienteW.php según los apuntes y al lanzarlo me da un error.
+*    creo clienteW.php según los apuntes y al lanzarlo me da un error.
 
         [Sun Mar 22 11:01:35.079318 2015] [:error] [pid 3172:tid 1072] 
         [client ::1:51557] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: 
@@ -44,5 +44,26 @@
         [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://localhos...', 'http://localhos...', 1, 0)\n#1 C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\ServerW.php(38): SoapClient->__soapCall('getPVP', Array, Array)\n#2 C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\clienteW.php(30): ServerW->getPVP('3DSNG')\n#3 {main}\n  
         thrown in C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\ServerW.php on line 38, referer: http://localhost/cicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/clienteW.php
 
-* la directiva soap.wsdl_cache_enabled = 0 y he reiniciaso el servidor y no se que más mirar ...
+* la directiva soap.wsdl_cache_enabled = 0 y he reiniciaso el servidor 
+
+
+* En esta segunda parte partimos de nuestro ServerW.php para generar un archivo wsdl.xml que será usado por los que 
+quieran consumir nuestro servicio para generarse su ServerW.php
+
+* Corregido alguna ruta que quedaba a /tareas/tarea9 por /practicas/practica9 y el error se mantiene.
+
+* Observo que al validar servicioW.wsdl.xml da estos dos errores  un warning 
+
+        XML validation started.
+        C:/Users/Javier/Dropbox/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/servicioW.wsdl.xml:20,4
+        WARNING: Message "getFamiliasRequest" does not have any child part elements defined. : Messages typically have at least one part defined.
+
+        C:/Users/Javier/Dropbox/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/servicioW.wsdl.xml:7,20
+        ERROR: src-resolve.4.2: Error al resolver el componente 'soap-enc:Array'. Se ha detectado que 'soap-enc:Array' está en el espacio de nombres 'http://schemas.xmlsoap.org/soap/encoding/', pero no se puede hacer referencia a los componentes de este espacio de nombres desde el documento de esquema 'file:/C:/Users/Javier/Dropbox/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/servicioW.wsdl.xml'. Si es el espacio de nombres incorrecto, puede que sea necesario cambiar el prefijo 'soap-enc:Array'. Si es el espacio de nombres correcto, es necesario agregar la etiqueta 'import' correspondiente a 'file:/C:/Users/Javier/Dropbox/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/servicioW.wsdl.xml'.
+
+        C:/Users/Javier/Dropbox/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/servicioW.wsdl.xml:7,20
+        ERROR: src-resolve: No se puede resolver el nombre 'soap-enc:Array' para un componente 'type definition'.
+
+
+
 
