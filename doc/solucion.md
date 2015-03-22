@@ -37,11 +37,12 @@
 * como creo que es que interpreta /t como tabulador lo llevo al directorio practicas/practica9... y deja de dar este fallo
 
 * Ahora da este otro
-    [Sun Mar 22 16:41:43.001736 2015] [:error] [pid 4192:tid 988] 
-    [client ::1:61376] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] 
-    Error Fetching http headers in C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\ServerW.php:38\nStack trace:\n#0 
-    [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://localhos...', 'http://localhos...', 1, 0)\n#1 C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\ServerW.php(38): SoapClient->__soapCall('getPVP', Array, Array)\n#2 C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\clienteW.php(30): ServerW->getPVP('3DSNG')\n#3 {main}\n  
-    thrown in C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\ServerW.php on line 38, referer: http://localhost/cicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/clienteW.php
-        
+
+        [Sun Mar 22 16:41:43.001736 2015] [:error] [pid 4192:tid 988] 
+        [client ::1:61376] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] 
+        Error Fetching http headers in C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\ServerW.php:38\nStack trace:\n#0 
+        [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://localhos...', 'http://localhos...', 1, 0)\n#1 C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\ServerW.php(38): SoapClient->__soapCall('getPVP', Array, Array)\n#2 C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\clienteW.php(30): ServerW->getPVP('3DSNG')\n#3 {main}\n  
+        thrown in C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\ServerW.php on line 38, referer: http://localhost/cicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/clienteW.php
+
 * la directiva soap.wsdl_cache_enabled = 0 y he reiniciaso el servidor y no se que más mirar ...
 
