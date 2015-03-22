@@ -15,8 +15,8 @@
         if (isset($_POST['enviar'])) {
             //$url="especificar la ubicación absoluta del fichero que contiene el objeto SoapServer";
             //$uri="especificar el directorio donde está el fichero"
-            $url = "http://localhost/CicloFormativoGradoSuperior/DAW_DWES/tareas/tarea9_serviciosSOAP/servicio.php";
-            $uri = "http://localhost/CicloFormativoGradoSuperior/DAW_DWES/tareas/tarea9_serviciosSOAP";
+            $url = "http://localhost/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/servicio.php";
+            $uri = "http://localhost/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP";
             //Creamos un cliente para llamar a esa URL. 
             //Es obligatorio establecer el parámetro 'uri' al no tener WSDL , igual que ocurría al instanciar el objeto SoapServer
             $cliente = new SoapClient(null, array('location' => $url, 'uri' => $uri));

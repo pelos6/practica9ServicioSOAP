@@ -15,7 +15,7 @@ class ServerW extends SoapClient {
   private static $classmap = array(
                                    );
 
-  public function ServerW($wsdl = "C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\tareas\\tarea9_serviciosSOAP\\servicioW.wsdl", $options = array()) {
+  public function ServerW($wsdl = "C:\\Users\\Javier\\Dropbox\\CicloFormativoGradoSuperior\\DAW_DWES\\practicas\\practica9_serviciosSOAP\\servicioW.wsdl", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;
@@ -32,7 +32,7 @@ class ServerW extends SoapClient {
    */
   public function getPVP($codigo) {
     return $this->__soapCall('getPVP', array($codigo),       array(
-            'uri' => 'http://localhost/CicloFormativoGradoSuperior/DAW_DWES/tareas/tarea9_serviciosSOAP/',
+            'uri' => 'http://localhost/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/',
             'soapaction' => ''
            )
       );
@@ -46,7 +46,7 @@ class ServerW extends SoapClient {
    */
   public function getFamilias() {
     return $this->__soapCall('getFamilias', array(),       array(
-            'uri' => 'http://localhost/CicloFormativoGradoSuperior/DAW_DWES/tareas/tarea9_serviciosSOAP/',
+            'uri' => 'http://localhost/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/',
             'soapaction' => ''
            )
       );
@@ -60,7 +60,7 @@ class ServerW extends SoapClient {
    */
   public function getProductosFamilia($familia) {
     return $this->__soapCall('getProductosFamilia', array($familia),       array(
-            'uri' => 'http://localhost/CicloFormativoGradoSuperior/DAW_DWES/tareas/tarea9_serviciosSOAP/',
+            'uri' => 'http://localhost/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/',
             'soapaction' => ''
            )
       );
@@ -75,7 +75,7 @@ class ServerW extends SoapClient {
    */
   public function getStock($codigo, $tienda) {
     return $this->__soapCall('getStock', array($codigo, $tienda),       array(
-            'uri' => 'http://localhost/CicloFormativoGradoSuperior/DAW_DWES/tareas/tarea9_serviciosSOAP/',
+            'uri' => 'http://localhost/CicloFormativoGradoSuperior/DAW_DWES/practicas/practica9_serviciosSOAP/',
             'soapaction' => ''
            )
       );
